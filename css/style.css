@@ -1,0 +1,30 @@
+*, *>* {
+	box-sizing: border-box;
+}
+body {
+	margin: 0;
+	background-color: whitesmoke;
+	background: grey;
+}
+ul {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+}
+table {
+	border-collapse: collapse;
+}
+/*
+@font-face {
+ font-family: 'FontyFamily';
+ src: url("../fonts/ditp.ttf");
+}
+*/
+
+#container {
+	width: 1024px;
+	margin: 50px auto;
+	background-color: whitesmoke;
+	padding: 12px;
+}
+

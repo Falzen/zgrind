@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<title>items</title>
+	<link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+	<div id="container">
+		<input rv-value="player.name" /><br />
+		<p>{ player.name } is { player.age } yo and has {player.money | currency } po.</p>
+<input rv-value="player.money | currency">
+		<p>{ player.name } will die on the {player.deathDate }</p>
+		<button rv-on-click="player.datInnerMethod">object inner method</button>
+
+
+	</div>
+
+	<!-- jquery -->
+	<script src="js/utils/jquery.js"></script>
+	<script src="js/utils/tinybind1.0.js"></script>
+	<script src="js/utils.js"></script>
+	<script src="js/main.js"></script>
+
+</body>
+
+</html>
