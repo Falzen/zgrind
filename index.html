@@ -10,14 +10,20 @@
 <body>
 
 	<div id="container">
+
 		<input rv-value="player.name" /><br />
 		<p>{ player.name } is { player.age } yo and has {player.money | currency } po.</p>
-<input rv-value="player.money | currency">
-		<p>{ player.name } will die on the {player.deathDate }</p>
+		<input rv-value="player.money | currency" />
+		<p>{ player.name } will die on the {player.deathDate | date}</p>
 		<button rv-on-click="player.datInnerMethod">object inner method</button>
 
 
 	</div>
+	<my-component 
+		message="Hello"
+		messagestart = ">>> start of MyComponent"
+		messageend = "<<< end of MyComponent">
+	</my-component>
 
 	<!-- jquery -->
 	<script src="js/utils/jquery.js"></script>

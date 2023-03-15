@@ -23,6 +23,19 @@ function makeMapByAttrFromList(list, attrName) {
 
 
 /* * * * * * * * * * * * * * * * * * * * * */
+function getCurrentDate() {
+  const nowDate = new Date();
+  return getCleanDate(nowDate);
+}
+function getCleanDate(theDate) {
+  const date = ('0' + theDate.getDate()).slice(-2);
+  const month = ('0' + (theDate.getMonth() + 1)).slice(-2);
+  const year = theDate.getFullYear();
+  return `${year}-${month}-${date}`;
+}
+
+
+
 
 
 /** 
