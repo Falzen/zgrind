@@ -7,27 +7,25 @@
 	<link rel="stylesheet" href="css/style.css">
 </head>
 
-<body>
+<body>z
 
 	<div id="container">
+		<character-avatar  rv-char="player" >
+		</character-avatar>
 
 		<input rv-value="player.name" /><br />
 		<p>{ player.name } is { player.age } yo and has {player.money | currency } po.</p>
 		<input rv-value="player.money | currency" />
-		<p>{ player.name } will die on the {player.deathDate | date}</p>
-		<button rv-on-click="player.datInnerMethod">object inner method</button>
+		<!-- <button rv-on-click="player.datInnerMethod">object inner method</button> -->
 
-
+		<p rv-text="player.name"></p>
 	</div>
-	<my-component 
-		message="Hello"
-		messagestart = ">>> start of MyComponent"
-		messageend = "<<< end of MyComponent">
-	</my-component>
 
 	<!-- jquery -->
 	<script src="js/utils/jquery.js"></script>
 	<script src="js/utils/tinybind1.0.js"></script>
+	<script src="js/models.js"></script>
+	<script src="js/cmps.js"></script>
 	<script src="js/utils.js"></script>
 	<script src="js/main.js"></script>
 

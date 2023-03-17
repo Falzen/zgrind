@@ -9,6 +9,55 @@ tinyBind : https://blikblum.github.io/tinybind/docs/guide/
 
 * * * * * * * * * * * * * * * * * * * * * */
 var idCpt = 0;
+
+var falzn = new Character(charData01);
+console.log('falzn : ', falzn);
+var freyg = new Character(charData02);
+console.log('freyg : ', freyg);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 var user = {
 	id: ++idCpt,
 	name: 'Dude',
@@ -34,7 +83,7 @@ function initTinyBind() {
 	initBinding();
 }
 function initBinding() {
-	tinybind.bind(document.getElementById('container'), {player: user})
+	tinybind.bind(document.getElementById('container'), {player: falzn})
 }
 function initFormatters() {
 	tinybind.formatters.date = {
@@ -67,29 +116,11 @@ $(document).ready(function() {
 	init();
 });
 
-
-class MyComponent extends tinybind.Component {
-	static get template() {
-		return `      
-			<p>{ messagestart }</p>
-			<p>{ message }</p>
-			<my-second-component 
-				messagestartb=">>> start of MySecondComponent" 
-				messageendb="<<< end of MySecondComponent" 
-				messageb="Hello again">
-			</my-second-component>
-			<p>{ messageend }</p>
-		`
-	}
-	static get properties() {
-		return {
-			message: true,
-			messagestart: true,
-			messageend: true
-		}
-    }
+function addCmp(cmp, domid) {
+	$('#'+domId).append(cmp);
 }
 
+/* 
 class MySecondComponent extends tinybind.Component {
 	static get template() {
 		return `      
@@ -107,7 +138,8 @@ class MySecondComponent extends tinybind.Component {
     }
 }
 
+*/
 function setCustomComponents() {
-	customElements.define('my-component', MyComponent);
-	customElements.define('my-second-component', MySecondComponent);
+	// customElements.define('my-component', MyComponent);
+	customElements.define('character-avatar', CharacterAvatar);
 }
